@@ -1,24 +1,4 @@
-<!-- eslint-disable vue/multi-word-component-names -->
-<template>
-    <!-- <h1> I drank {{ beers }} beers</h1> -->
-    <h1>
-    <div class="flex">
-        <div v-for="country in beerdata" :key="country.country">
-            <h2>{{ country.country }}: 
-            <Vue3autocounter ref='counter' :startAmount='0' :endAmount='country.beer_cans_a_year' :duration='31536000' separator=',' decimalSeparator='.' :autoinit='true'/>
-            </h2>
-        </div>
-    </div>
-    </h1>
-    <!-- <button label="Add Beer" @click="addBeer">Add Beer</button>
-    <button label="Delete Beer" @click="deleteBeer">Delete Beer</button> -->
-</template>
-
-<script setup lang="ts">
-// import { ref } from 'vue';
-import Vue3autocounter from 'vue3-autocounter';
-// import {VueCsvImportPlugin} from 'vue-csv-import';
-const beerdata = [
+[
   {
     "country": "Czech Republic",
     "total_national_million_liters_per_year": 1498,
@@ -508,28 +488,3 @@ const beerdata = [
     "fl_oz_per_year_per_capita": 1.972486628
   }
 ]
-
-// const beers = ref<number>(0);
-// const counter = 1000000000;
-// const run = ref(true);
-
-// while (run) {
-//     addBeer();
-//     // setTimeout(() => run.value = false, 20000);
-// }
-
-
-// async function addBeer() {
-//     beers.value = beers.value + 1;
-// }
-
-// function deleteBeer() {
-//     if (beers.value != 0){
-//         beers.value = beers.value - 1;
-//     }
-// }
-</script>
-
-<style>
-
-</style>
