@@ -1,11 +1,17 @@
 <template>
+<div :style="{'backgroundImage': BeerPic}">
+<!-- <div :style="{'backgroundImage': 'url(./assets/Beer.jpeg)'}"> -->
   <Home/>
+</div>
+  <!-- <img :src="BeerPic"> -->
 </template>
 
 <script setup>
 // import Vue, { createApp } from 'vue';
 
 import Home from './components/Home.vue';
+import BeerPic from './assets/Beer.jpeg';
+
 
 // import { createApp } from 'vue';
 // import Vue3Autocounter from 'vue3-autocounter';
