@@ -4,10 +4,12 @@
     <h1>
     <div class="flex">
         <div v-for="country in beerdata" :key="country.country">
-            <h2>{{ country.country }}: 
-            <Vue3autocounter ref='counter' :startAmount='0' :endAmount='country.beer_cans_a_year' :duration='31536000' separator=',' decimalSeparator='.' :autoinit='true'/>
-            <br>
-            </h2>
+            <div v-if="country.beer_cans_a_year != 0">
+                <h2>{{ country.country }}: 
+                    <Vue3autocounter ref='counter' :startAmount='0' :endAmount='country.beer_cans_a_year' :duration='31536000' separator=',' decimalSeparator='.' :autoinit='true'/>
+                    <br>
+                </h2>
+            </div>
         </div>
     </div>
     </h1>
